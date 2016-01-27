@@ -3,11 +3,11 @@ Feature: Registration
   In order to registration on web-projects
   Should be automatic
 
-  Scenario: Valid user registers at website
+  Scenario: Creating a new account
 
-    Given I have a valid user details
-    Given I navigate to spree portal
+    Given I am on the registration page
     When I register the user
-    Then users should be registered successfully
+    Then I should save user in file
+
 
 
