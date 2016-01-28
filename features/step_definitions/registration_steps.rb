@@ -30,7 +30,8 @@ require_relative '../../user'
 
   Then(/^I should save user in file$/) do
     begin
-      CSV.open('file.csv', 'a+', {:col_sep => "\t\t||\t\t"}) do |csv|
+      CSV.open('file.csv', 'a+', {:col_sep => ';'}) do |csv|
+        csv << %w(Email Login Password)
         @user_array.each do |user|
           csv << [user.email, user.login, user.password]
         end
