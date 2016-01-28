@@ -6,7 +6,7 @@ Feature: Registration
   Scenario: Creating a new account
 
     Given I am on the registration page
-    When I register the user
+    When I register the user 10 times
     Then I should save user in file
 
 
